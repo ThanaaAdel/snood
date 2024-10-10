@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/dialogs.dart';
 import '../../../core/utils/style_text.dart';
-import '../../../core/widgets/appbar_widget_with_screens.dart';
 import '../../../core/widgets/button_widget.dart';
 import 'details_from_insert_monthly_contract_screen.dart';
 
@@ -121,7 +120,7 @@ class ServiceSummaryWidget extends StatelessWidget {
   final String orderNumber;
   final String occupation;
   final String statusOrder;
-  ServiceSummaryWidget({
+  const ServiceSummaryWidget({
     super.key,
     required this.fromHour,
     required this.toHour,

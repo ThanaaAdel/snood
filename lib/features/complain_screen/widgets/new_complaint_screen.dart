@@ -116,7 +116,7 @@ class NewComplaintScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           height: 150,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

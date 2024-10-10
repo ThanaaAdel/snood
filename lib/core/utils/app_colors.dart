@@ -28,7 +28,7 @@ class AppColors {
   // static Color gray6 = HexColor('#A7A7A7');
   // static Color gray7 = HexColor('#A0A1A0');
   static Color red = HexColor('#FF0000');
-  static Color blue3 = Color(0xff3646ff);
+  static Color blue3 = const Color(0xff3646ff);
   static Color bink = HexColor('#FF9F9F');
   static Color purple1 = HexColor('#854AA4');
   static Color purple1light = HexColor('#E3D2FE');
@@ -36,7 +36,7 @@ class AppColors {
   static Color baseGrayColor = HexColor('#eff3f9');
   static Color blue1 = HexColor('#2D6CB4');
   static Color blue2 = HexColor('#8290F8');
-  static Color blue4 = Color(0xff3E3F68);
+  static Color blue4 = const Color(0xff3E3F68);
   static Color bluelight = HexColor('#D7EAF9');
   static Color orange = HexColor('#E07F2D');
   static Color orangelight = HexColor('#FFEAD7');

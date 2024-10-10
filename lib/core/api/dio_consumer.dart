@@ -50,7 +50,7 @@ class DioConsumer implements BaseApiConsumer {
         options: options,
       );
       return _handleResponseAsJson(response);
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       _handleDioError(error);
     }
   }
@@ -69,7 +69,7 @@ class DioConsumer implements BaseApiConsumer {
         options: options,
       );
       return _handleResponseAsJson(response);
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       _handleDioError(error);
     }
   }
@@ -87,7 +87,7 @@ class DioConsumer implements BaseApiConsumer {
         options: options,
       );
       return _handleResponseAsJson(response);
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       _handleDioError(error);
     }
   }
@@ -106,7 +106,7 @@ class DioConsumer implements BaseApiConsumer {
         options: options,
       );
       return _handleResponseAsJson(response);
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       _handleDioError(error);
     }
   }
@@ -125,7 +125,7 @@ class DioConsumer implements BaseApiConsumer {
         options: options,
       );
       return response;
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       _handleDioError(error);
     }
   }
@@ -139,13 +139,13 @@ class DioConsumer implements BaseApiConsumer {
     }
   }
 
-  void _handleDioError(DioError error) {
+  void _handleDioError(DioException error) {
     switch (error.type) {
-      case DioErrorType.connectionTimeout:
-      case DioErrorType.sendTimeout:
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.connectionTimeout:
+      case DioExceptionType.sendTimeout:
+      case DioExceptionType.receiveTimeout:
         throw const FetchDataException();
-      case DioErrorType.badResponse:
+      case DioExceptionType.badResponse:
         switch (error.response?.statusCode) {
           case StatusCode.badRequest:
             throw const BadRequestException();
@@ -161,9 +161,9 @@ class DioConsumer implements BaseApiConsumer {
           default:
             throw const FetchDataException();
         }
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         throw const FetchDataException();
-      case DioErrorType.unknown:
+      case DioExceptionType.unknown:
       default:
         throw const NoInternetConnectionException();
     }

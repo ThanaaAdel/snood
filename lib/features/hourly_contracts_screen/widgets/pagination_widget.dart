@@ -7,11 +7,11 @@ class PaginationWidget extends StatelessWidget {
   final ValueChanged<int> onPageChanged;
 
   const PaginationWidget({
-    Key? key,
+    super.key,
     required this.currentPage,
     required this.totalPages,
     required this.onPageChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PaginationWidget extends StatelessWidget {
     pageButtons.add(
       IconButton(
         onPressed: currentPage > 1 ? () => onPageChanged(currentPage - 1) : null,
-        icon: Icon(Icons.chevron_left),
+        icon: const Icon(Icons.chevron_left),
         color: currentPage > 1 ? Colors.black : Colors.grey,
       ),
     );
@@ -38,7 +38,7 @@ class PaginationWidget extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4), // Rounded corners
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               elevation: 0, // Remove shadow
             ),
             child: Text(
@@ -61,7 +61,7 @@ class PaginationWidget extends StatelessWidget {
     pageButtons.add(
       IconButton(
         onPressed: currentPage < totalPages ? () => onPageChanged(currentPage + 1) : null,
-        icon: Icon(Icons.chevron_right),
+        icon: const Icon(Icons.chevron_right),
         color: currentPage < totalPages ? Colors.black : Colors.grey,
       ),
     );

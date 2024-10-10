@@ -10,7 +10,7 @@ errorGetBar(String message) {
   Get.showSnackbar(
     GetSnackBar(
       messageText: Text(
-        message!,
+        message,
         style: Get.textTheme.titleSmall!.copyWith(
           color: Colors.white,
           height: 1.3,

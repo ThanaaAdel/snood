@@ -23,6 +23,7 @@ class _InsertProfessionalEmploymentScreenState extends State<InsertProfessionalL
     context.read<InsertProfessionalLaborCubit>().getOccupationsData(clientId:widget.clientId);
     context.read<InsertProfessionalLaborCubit>().getCountryData();
   }
+  @override
   Widget build(BuildContext context) {
     var cubit = context.read<InsertProfessionalLaborCubit>();
     return SafeArea(
