@@ -21,6 +21,7 @@ class MediationContractRequestDetailsScreen extends StatelessWidget {
 
     return formattedDate;
   }
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(

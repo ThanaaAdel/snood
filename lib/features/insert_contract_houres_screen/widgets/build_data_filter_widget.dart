@@ -41,7 +41,7 @@ class _BuildDataFilterWidgetState extends State<BuildDataFilterWidget> {
                 data: Theme.of(context).copyWith(
                   colorScheme: ColorScheme.light(
                     secondary: AppColors.primary,
-                    background: AppColors.blue,
+                    surface: AppColors.blue,
                     primary: AppColors.blue,
                     onPrimary: AppColors.white,
                     onSurface: AppColors.black,

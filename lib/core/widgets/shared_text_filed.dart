@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/app_colors.dart';
-import '../utils/font_weight_helper.dart';
 import '../utils/style_text.dart';
 
 class SharedTextFiled extends StatelessWidget {

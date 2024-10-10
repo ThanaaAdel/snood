@@ -21,6 +21,7 @@ class ProfessionalLaborRequestDetailsScreen extends StatelessWidget {
 
     return formattedDate;
   }
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
@@ -126,7 +127,7 @@ class ProfessionalLaborRequestDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     isArchive == true || inProgress == true?
-                        SizedBox():
+                        const SizedBox():
                     ButtonWidget(textButton: "archiving".tr(), onPressed:onPressed),
                   ],
                 ),
